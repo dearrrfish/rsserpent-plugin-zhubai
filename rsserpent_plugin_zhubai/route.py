@@ -33,7 +33,7 @@ async def provider(sub: str) -> Dict[str, Any]:
                 "description": parse_content(item["content"]),
                 "author": item["author"]["name"],
                 "pub_date": datetime.fromtimestamp(
-                    int(item["publication"]["updated_at"] / 1000), tz=timezone.utc
+                    int(item["created_at"] / 1000), tz=timezone.utc
                 ).isoformat(),
             }
             for item in data
