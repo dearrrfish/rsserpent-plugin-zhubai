@@ -79,6 +79,7 @@ def translate(e: Dict[str, Any]) -> str:
         "list-item": lambda _: f"<li>{children}</li>",
         "heading-one": lambda _: f"<h1>{children}</h1>",
         "heading-two": lambda _: f"<h2>{children}</h2>",
+        "paragraph": lambda _: f"<p>{children}</p>",
         "image": lambda x: f"<figure><div><img src=\"{x['url']}\"></div></figure>",
         "link": lambda x: f"<a href=\"{x['url']}\" target=\"_black\">{children}</a>",
         "paywall": lambda x: "<div><b>PAYWALL BREAK</b></div>",
