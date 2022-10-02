@@ -14,7 +14,7 @@ async def provider(sub: str) -> Dict[str, Any]:
     u = f"https://{sub}.zhubai.love"
     async with HTTPClient() as http:
         response = await http.get(
-            f"{u}/api/publications/{sub}/posts?publication_id_type=token&limit=20",
+            f"{u}/api/publications/{sub}/posts?publication_id_type=token&limit=10",
             headers={
                 "Referer": u,
             },
